@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>レスポンシブデザインの体験</h1>
+  </header>
+
+  <main>
+    <section class="width-test">
+      <h2>1.幅のテスト</h2>
+
+      <h3>A. 固定 (width: 500px)</h3>
+      <div class="box-base box-fixed">ブラウザを狭くすると画面からはみ出します</div>
+
+      <h3>B. 流動 (width: 100%)</h3>
+      <div class="box-base box-fluid">ブラウザに合わせて伸び縮みします</div>
+
+      <h3>C. ハイブリッド (max-width: 500px)</h3>
+      <div class="box-base box-ideal">基本は100%ですが、500px以上には広がりません</div>
+    </section>
+    
+<section class="media-query-test">
+      <h2>2.メディアクエリ</h2>
+      <div class="responsive-test">
+        <p><span class="mode-text">現在のモード：</span></p>
+        <p>ブラウザの横幅をゆっくり動かしてみてください。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; Webデザイン演習</p>
+  </footer> 
+</body>
+</html>

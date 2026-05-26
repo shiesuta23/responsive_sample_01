@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* 1.幅のテスト */
+*{
+    box-sizing: border-box;
+}
+/* 共通の装飾 */
+.box-base {
+  height: 100px;
+  margin-bottom: 30px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* A. 固定 */
+.box-fixed {
+  width: 500px;
+  background-color: #e74c3c; /* 赤 */
+}
+
+/* B. 流動 */
+.box-fluid {
+  width: 100%;
+  background-color: #3498db; /* 青 */
+}
+
+/* C. ハイブリッド */
+.box-ideal {
+  width: 100%;
+  max-width: 500px;
+  background-color: #2ecc71; /* 緑 */
+}
+
+/* 2. メディアクエリ */
+
+/* スマホサイズの設定（モバイルファースト） */
+.responsive-test {
+    background-color: #ffeb3b; /* 黄 */
+    padding: 50px;
+    text-align: center;
+}
+
+.mode-text {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.mode-text::after {
+    content: "スマホ版 (767px以下)";
+}
+
+/* タブレット以上のサイズ（768px以上） */
+@media (min-width: 768px) {
+    .responsive-test {
+        background-color: #ff9800; /* オレンジ */
+    }
+    
+    .mode-text::after {
+        content: "タブレット版 (768px以上)";
+    }
+}
+
+/* PCサイズ（1024px以上） */
+@media (min-width: 1024px) {
+    .responsive-test {
+        background-color: #00bcd4; /* シアン */
+    }
+    
+    .mode-text::after {
+        content: "PC版 (1024px以上)";
+    }
+}
+
+/* PCサイズ（1100px以上） */
+@media (min-width: 1100px) {
+    .responsive-test {
+        background-color: #f995db; /* シアン */
+    }
+    
+    .mode-text::after {
+        content: "PC版 (1100px以上)";
+    }
+}
